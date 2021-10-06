@@ -1,0 +1,27 @@
+{
+  "name": "BlueEdTech_Modulo02_ProjetoFinal_CatalogoLivre",
+  "version": "1.0.0",
+  "description": "Projeto final do módulo 2, que consiste na criação de um catálogo (com tema livre), onde será possível no futuro realizar as 4 operações do CRUD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoCarravetta/BlueEdTech_Modulo02_ProjetoFinal_CatalogoLivre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoCarravetta/BlueEdTech_Modulo02_ProjetoFinal_CatalogoLivre/issues"
+  },
+  "homepage": "https://github.com/DiegoCarravetta/BlueEdTech_Modulo02_ProjetoFinal_CatalogoLivre#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
