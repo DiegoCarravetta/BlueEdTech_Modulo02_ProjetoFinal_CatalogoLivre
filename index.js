@@ -11,4 +11,20 @@ app.get (`/`, (req, res) => {
     res.render (`index`);
 });
 
+app.get (`/catalogo`, (req, res) => {
+    res.render (`catalogo`);
+});
+
+app.get (`/informacoes`, (req, res) => {
+    res.render (`informacoes`)
+});
+
+app.get (`/criacao`, (req, res) => {
+    res.render (`criacao`)
+});
+
+app.get (`/adicionar`, (req, res) => {
+    res.render (`adicionar`)
+});
+
 app.listen (port, () => console.log (`Servidor rodando em http://localhost:${port}`));
