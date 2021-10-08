@@ -11,8 +11,8 @@ app.get (`/`, (req, res) => {
     res.render (`index`);
 });
 
-app.get (`/catalogo`, (req, res) => {
-    res.render (`catalogo`);
+app.get (`/catalogar`, (req, res) => {
+    res.render (`catalogar`);
 });
 
 app.get (`/informacoes`, (req, res) => {
