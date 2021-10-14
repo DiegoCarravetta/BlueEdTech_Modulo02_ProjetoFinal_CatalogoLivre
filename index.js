@@ -15,12 +15,12 @@ app.get (`/catalogar`, (req, res) => {
     res.render (`catalogar`);
 });
 
-app.get (`/informacoes`, (req, res) => {
-    res.render (`informacoes`)
+app.get (`/informar`, (req, res) => {
+    res.render (`informar`)
 });
 
-app.get (`/criacao`, (req, res) => {
-    res.render (`criacao`)
+app.get (`/criar`, (req, res) => {
+    res.render (`criar`)
 });
 
 app.get (`/adicionar`, (req, res) => {
