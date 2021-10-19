@@ -23,8 +23,8 @@ app.get (`/criar`, (req, res) => {
     res.render (`criar`)
 });
 
-app.get (`/adicionar`, (req, res) => {
-    res.render (`adicionar`)
+app.get (`/editar`, (req, res) => {
+    res.render (`editar`)
 });
 
 app.listen (port, () => console.log (`Servidor rodando em http://localhost:${port}`));
