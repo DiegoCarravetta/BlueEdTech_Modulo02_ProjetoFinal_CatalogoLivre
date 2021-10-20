@@ -7,3 +7,14 @@ const sequelize = new sequelize (process.env.DB_BASE, process.env.DB_USER, proce
 });
 
 module.exports = sequelize;
+
+/*const sequelize = new Sequelize(process.env.DATABASE_URL, {     
+  dialect: 'postgres',
+  protocol: 'postgres',     
+  dialectOptions: {         
+    ssl: {             
+      require: true,             
+      rejectUnauthorized: false         
+    }     
+  } 
+}) */

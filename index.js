@@ -11,22 +11,31 @@ app.use (express.urlencoded({ extended: true }));
 app.set (`view engine`, `ejs`);
 app.use (express.static (path.join (__dirname, `public`)));
 
-const carros = [
-    {
-        "id": 1,
-        "marca": "Audi",
-        "nome": "R8",
-        "modelo": "Sport",
-        "ano": 2021,
-        "valor": 750,
-        "imagem": "/img/car-card.png"
-    }
-]
-
 app.get (`/`, (req, res) => {
+    const carros = [
+        {
+            "id": 1,
+            "marca": "Audi",
+            "nome": "R8",
+            "modelo": "Sport",
+            "ano": 2021,
+            "valor": 750,
+            "imagem": "/img/car-card.png"
+        }
+    ];
+
+    setTimeout ( () => {
+        message = ``;
+    }, 1000);
+
     res.render (`index`, {
-        carros,
+        lista: carros, message,
     });
+});
+
+app.post (`/novo`, (req, res) => {
+    message = `Parabéns, seu carro foi cadastrado com sucesso`;
+    res.redirect (`/`);
 });
 
 app.get (`/catalogar`, (req, res) => {
@@ -34,15 +43,52 @@ app.get (`/catalogar`, (req, res) => {
 });
 
 app.get (`/informar`, (req, res) => {
-    res.render (`informar`)
+    setTimeout ( () => {
+        message = ``;
+    }, 1000);
+
+    res.render (`informar`, {
+        message,
+    });
 });
 
 app.get (`/criar`, (req, res) => {
-    res.render (`criar`)
+    setTimeout ( () => {
+        message = ``;
+    }, 1000);
+
+    res.render (`criar`, {
+        message,
+    });
 });
 
 app.get (`/editar`, (req, res) => {
     res.render (`editar`)
 });
+
+app.post("/novo", (req, res) => {
+    const {
+        id,
+        marca,
+        nome,
+        modelo,
+        ano,
+        valor,
+        imagem,
+    } = req.body;
+
+    const novoCarros = {
+        Id: id,
+        Marca: marca,
+        Nome: nome,
+        Modelo: modelo,
+        Ano: ano,
+        Valor: valor,
+        Imagem: imagem,
+    };
+
+    carros.push(novoCarros);
+    res.redirect("/");
+  });
 
 app.listen (port, () => console.log (`Servidor rodando em http://localhost:${port}`));
